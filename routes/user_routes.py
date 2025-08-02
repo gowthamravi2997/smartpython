@@ -8,6 +8,8 @@ def create_user():
     data = request.get_json()
     if not data or 'username' not in data or 'email' not in data:
         return {'error': 'Missing required fields'}, 400
+    print("Hi")
+    print("hello")
     return UserService.create_user(data)
 
 @user_bp.route('/', methods=['GET'])

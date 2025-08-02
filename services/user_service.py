@@ -74,7 +74,7 @@ class UserService:
 
     @classmethod
     def get_users(cls, authcode):
-        is_valid, message = verify_authorization_token(authcode, "admin@0702", "smart")
+        is_valid, message = verify_authorization_token(authcode, "admin@123", "smart")
         print(is_valid)
         if not is_valid:
             return "Unauthorized", 401
